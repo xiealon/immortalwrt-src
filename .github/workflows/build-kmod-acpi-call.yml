@@ -6,6 +6,10 @@ name: build kmod-acpi-call
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'package/kernel/acpi-call/**'
+      - '.github/workflows/build-kmod-acpi-call.yml'
 
 permissions:
   contents: read
